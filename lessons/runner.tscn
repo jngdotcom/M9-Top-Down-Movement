@@ -11,9 +11,11 @@ motion_mode = 1
 script = ExtResource("1_h1hi2")
 
 [node name="Skin" type="Sprite2D" parent="."]
+unique_name_in_owner = true
 position = Vector2(1.9073486e-06, -9.536743e-07)
 scale = Vector2(1.3046875, 1.2265625)
 texture = ExtResource("2_ipi7s")
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 33)
