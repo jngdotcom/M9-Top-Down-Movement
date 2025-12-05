@@ -20,3 +20,5 @@ flip_h = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 33)
 shape = SubResource("CircleShape2D_2nvb5")
+
+[node name="Camera2D" type="Camera2D" parent="."]

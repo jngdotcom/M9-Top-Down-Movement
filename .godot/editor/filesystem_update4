@@ -1,3 +1,6 @@
-res://lessons/runner.tscn
+res://collison.tscn
 res://addons/gdpractice/assets/theme.tres
-res://runner.gd
+res://lessons/collison.tscn
+res://lessons/game.tscn
+res://lessons/circuit.tscn
+res://lessons/runner.tscn
