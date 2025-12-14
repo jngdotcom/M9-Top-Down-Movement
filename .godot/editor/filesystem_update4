@@ -5,3 +5,4 @@ res://assets/runner/runner_visual_red.tscn
 res://runner.gd
 res://lessons/test_particles.tscn
 res://lessons/game.gd
+res://lessons/CountDown.tscn
