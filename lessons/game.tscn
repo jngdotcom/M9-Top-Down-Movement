@@ -1,15 +1,22 @@
-[gd_scene load_steps=5 format=3 uid="uid://3gicpphw4ki0"]
+[gd_scene load_steps=7 format=3 uid="uid://3gicpphw4ki0"]
 
+[ext_resource type="Script" uid="uid://5nrf8ebgtofs" path="res://lessons/game.gd" id="1_48faf"]
 [ext_resource type="PackedScene" uid="uid://p75euy1gcr34" path="res://lessons/runner.tscn" id="1_yasw7"]
 [ext_resource type="PackedScene" uid="uid://dco7taeg3o1qp" path="res://lessons/collison.tscn" id="2_4o7yg"]
 [ext_resource type="Texture2D" uid="uid://5vl7p0xb7nd8" path="res://assets/circuit_background.png" id="2_gkp25"]
+[ext_resource type="PackedScene" uid="uid://xl56q8amb611" path="res://assets/finish_line/finish_line.tscn" id="2_sepuf"]
 [ext_resource type="PackedScene" uid="uid://c6m5ktrjrtgba" path="res://lessons/circuit.tscn" id="3_4o7yg"]
 
 [node name="Game" type="Node2D"]
 y_sort_enabled = true
+script = ExtResource("1_48faf")
 
 [node name="Runner" parent="." instance=ExtResource("1_yasw7")]
 position = Vector2(-8, -30)
+
+[node name="FinishLine" parent="." instance=ExtResource("2_sepuf")]
+position = Vector2(-448, 278)
+area_width = 256
 
 [node name="circuitbackground" type="Sprite2D" parent="."]
 z_index = -1
@@ -25,3 +32,4 @@ position = Vector2(-1283, -32)
 position = Vector2(391, 243)
 
 [node name="circuit" parent="." instance=ExtResource("3_4o7yg")]
+visible = false
