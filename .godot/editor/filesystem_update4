@@ -6,3 +6,6 @@ res://runner.gd
 res://lessons/test_particles.tscn
 res://lessons/game.gd
 res://lessons/CountDown.tscn
+res://lessons/pause_screen.tscn
+res://assets/blur.gdshader
+res://lessons/pause_screen.gd

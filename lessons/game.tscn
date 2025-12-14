@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://3gicpphw4ki0"]
+[gd_scene load_steps=10 format=3 uid="uid://3gicpphw4ki0"]
 
 [ext_resource type="Script" uid="uid://5nrf8ebgtofs" path="res://lessons/game.gd" id="1_48faf"]
 [ext_resource type="PackedScene" uid="uid://p75euy1gcr34" path="res://lessons/runner.tscn" id="1_yasw7"]
@@ -8,9 +8,11 @@
 [ext_resource type="Theme" uid="uid://cdcyvsn1fp8wa" path="res://assets/countdown/count_down_theme.tres" id="2_viysf"]
 [ext_resource type="PackedScene" uid="uid://c6m5ktrjrtgba" path="res://lessons/circuit.tscn" id="3_4o7yg"]
 [ext_resource type="Script" uid="uid://57e8080cpukf" path="res://assets/countdown/count_down.gd" id="3_tpjcj"]
+[ext_resource type="PackedScene" uid="uid://dj6ye05dbiqpi" path="res://lessons/pause_screen.tscn" id="4_tpjcj"]
 
 [node name="Game" type="Node2D"]
 y_sort_enabled = true
+position = Vector2(1920, 1344)
 script = ExtResource("1_48faf")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -33,6 +35,9 @@ horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("3_tpjcj")
 metadata/_custom_type_script = "uid://57e8080cpukf"
+
+[node name="PauseScreen" parent="CanvasLayer" instance=ExtResource("4_tpjcj")]
+menu_opened_amount = 0.754
 
 [node name="Runner" parent="." instance=ExtResource("1_yasw7")]
 unique_name_in_owner = true
