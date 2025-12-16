@@ -1,5 +1,4 @@
 @tool
-@tool
 extends Control
 
 @onready var _blur_color_rect: ColorRect = %BlurColorRect
