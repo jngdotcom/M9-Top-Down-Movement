@@ -15,40 +15,10 @@ y_sort_enabled = true
 position = Vector2(1920, 1344)
 script = ExtResource("1_48faf")
 
-[node name="Runner" parent="." instance=ExtResource("1_yasw7")]
-unique_name_in_owner = true
-process_mode = 1
-position = Vector2(-8, -30)
-
-[node name="FinishLine" parent="." instance=ExtResource("2_sepuf")]
-process_mode = 1
-position = Vector2(-448, 278)
-area_width = 256
-
-[node name="circuitbackground" type="Sprite2D" parent="."]
-process_mode = 1
-z_index = -1
-texture = ExtResource("2_gkp25")
-
-[node name="circuit" parent="." instance=ExtResource("3_4o7yg")]
-process_mode = 1
-
-[node name="SimpleObstacles" type="Node" parent="."]
-
-[node name="SimpleObstacle" parent="SimpleObstacles" instance=ExtResource("2_4o7yg")]
-position = Vector2(3191, 1273)
-
-[node name="SimpleObstacle3" parent="SimpleObstacles" instance=ExtResource("2_4o7yg")]
-position = Vector2(2311, 1587)
-
-[node name="SimpleObstacle2" parent="SimpleObstacles" instance=ExtResource("2_4o7yg")]
-position = Vector2(637, 1312)
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="CountDown" type="Label" parent="CanvasLayer"]
 unique_name_in_owner = true
-process_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -65,8 +35,30 @@ horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("3_tpjcj")
 metadata/_custom_type_script = "uid://57e8080cpukf"
-metadata/_edit_use_anchors_ = true
 
 [node name="PauseScreen" parent="CanvasLayer" instance=ExtResource("4_tpjcj")]
 menu_opened_amount = 0.754
-metadata/_edit_use_anchors_ = true
+animation_duration = null
+
+[node name="Runner" parent="." instance=ExtResource("1_yasw7")]
+unique_name_in_owner = true
+position = Vector2(-8, -30)
+
+[node name="FinishLine" parent="." instance=ExtResource("2_sepuf")]
+position = Vector2(-448, 278)
+area_width = 256
+
+[node name="circuitbackground" type="Sprite2D" parent="."]
+z_index = -1
+texture = ExtResource("2_gkp25")
+
+[node name="SimpleObstacle" parent="." instance=ExtResource("2_4o7yg")]
+position = Vector2(1271, -71)
+
+[node name="SimpleObstacle2" parent="." instance=ExtResource("2_4o7yg")]
+position = Vector2(-1283, -32)
+
+[node name="SimpleObstacle3" parent="." instance=ExtResource("2_4o7yg")]
+position = Vector2(391, 243)
+
+[node name="circuit" parent="." instance=ExtResource("3_4o7yg")]

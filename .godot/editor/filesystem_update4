@@ -1,11 +1,5 @@
-res://lessons/runner.tscn
-res://addons/gdpractice/assets/theme.tres
-res://lessons/game.tscn
-res://assets/runner/runner_visual_red.tscn
-res://runner.gd
-res://lessons/test_particles.tscn
-res://lessons/game.gd
-res://lessons/CountDown.tscn
 res://lessons/pause_screen.tscn
+res://addons/gdpractice/assets/theme.tres
 res://assets/blur.gdshader
+res://lessons/game.tscn
 res://lessons/pause_screen.gd
