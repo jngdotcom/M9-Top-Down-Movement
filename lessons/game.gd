@@ -1,6 +1,8 @@
 extends Node2D
 
 @onready var _runner: Runner = %Runner
+@onready var bouncer: CharacterBody2D = %Bouncer
+
 @onready var _count_down: CountDown = %CountDown
 
 @onready var _finish_line: FinishLine = $FinishLine

@@ -1,4 +1,7 @@
-res://lessons/pause_screen.tscn
+res://lessons/bouncer.tscn
 res://addons/gdpractice/assets/theme.tres
 res://assets/blur.gdshader
+res://lessons/bouncer.gd
+res://lessons/runner.tscn
 res://lessons/game.tscn
+res://lessons/game.gd
