@@ -1,7 +1,7 @@
 extends Node2D
 
 @onready var _runner: Runner = %Runner
-@onready var bouncer: CharacterBody2D = %Bouncer
+@onready var _bouncer: CharacterBody2D = %Bouncer
 
 @onready var _count_down: CountDown = %CountDown
 
@@ -34,4 +34,11 @@ func _ready() -> void:
 	_count_down.counting_finished.connect(
 		func() -> void:
 			_runner.set_physics_process(true)
+	)
+	
+	_bouncer.set_physics_process(false)
+	
+	_count_down.counting_finished.connect(
+		func() -> void:
+			_bouncer.set_physics_process(true)
 	)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://budpgxkjtmw1f"]
+[gd_scene load_steps=15 format=3 uid="uid://budpgxkjtmw1f"]
 
 [ext_resource type="Script" uid="uid://cvovse0lvo8pp" path="res://lessons/bouncer.gd" id="1_o17vw"]
 [ext_resource type="Texture2D" uid="uid://dbcmxo51msi8m" path="res://assets/runner/shadow.png" id="2_41ggd"]
@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bkq3gfbp5fwqx" path="res://assets/circle_64x64.png" id="5_wkdje"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2nvb5"]
-radius = 37.0
+radius = 32.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ipi7s"]
 shader = ExtResource("4_2lotv")
@@ -41,20 +41,17 @@ scale_curve = SubResource("CurveTexture_agra7")
 color = Color(0.56078434, 0.56078434, 0.56078434, 0.8392157)
 alpha_curve = SubResource("CurveTexture_cl8lt")
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_o17vw"]
+radius = 39.0
+
 [node name="Bouncer" type="CharacterBody2D"]
-position = Vector2(0, -55)
+position = Vector2(0, -64)
 motion_mode = 1
 script = ExtResource("1_o17vw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 16)
+position = Vector2(0, 33)
 shape = SubResource("CircleShape2D_2nvb5")
-
-[node name="Shadow" type="Sprite2D" parent="."]
-modulate = Color(0, 0, 0, 0.11764706)
-position = Vector2(1.5497208e-06, 45.125004)
-scale = Vector2(0.6458334, 0.49609378)
-texture = ExtResource("2_41ggd")
 
 [node name="SubViewport" type="SubViewport" parent="."]
 transparent_bg = true
@@ -65,12 +62,25 @@ unique_name_in_owner = true
 position = Vector2(62, 120)
 scale = Vector2(0.5, 0.5)
 
+[node name="Shadow" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 0.11764706)
+position = Vector2(0, 57)
+scale = Vector2(0.6458334, 0.49609378)
+texture = ExtResource("2_41ggd")
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_ipi7s")
-position = Vector2(6, 11)
+position = Vector2(0, 11)
 texture = SubResource("ViewportTexture_ipi7s")
 
 [node name="dust" type="GPUParticles2D" parent="."]
 emitting = false
 texture = ExtResource("5_wkdje")
 process_material = SubResource("ParticleProcessMaterial_cl8lt")
+
+[node name="HitBox" type="Area2D" parent="."]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+position = Vector2(0, 13)
+shape = SubResource("CircleShape2D_o17vw")
