@@ -1,14 +1,33 @@
-[gd_scene load_steps=3 format=3 uid="uid://cypeg7f6ibbbd"]
+[gd_scene load_steps=5 format=3 uid="uid://cypeg7f6ibbbd"]
 
 [ext_resource type="Script" uid="uid://c562ahi62y2s0" path="res://lessons/ray_cast_2d.gd" id="1_j13gy"]
 [ext_resource type="PackedScene" uid="uid://dco7taeg3o1qp" path="res://lessons/collison.tscn" id="1_k515x"]
+[ext_resource type="PackedScene" uid="uid://budpgxkjtmw1f" path="res://lessons/bouncer.tscn" id="1_shtk0"]
+[ext_resource type="PackedScene" uid="uid://p75euy1gcr34" path="res://lessons/runner.tscn" id="2_1bk0p"]
 
-[node name="Raycast Test" type="Node2D"]
+[node name="Game" type="Node2D"]
 position = Vector2(121, 130)
+
+[node name="Bouncer" parent="." instance=ExtResource("1_shtk0")]
+position = Vector2(69, 149)
+
+[node name="Runner" parent="." instance=ExtResource("2_1bk0p")]
+position = Vector2(781, 144)
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 target_position = Vector2(120, 0)
 script = ExtResource("1_j13gy")
 
-[node name="SimpleObstacle" parent="." instance=ExtResource("1_k515x")]
-position = Vector2(237, -57)
+[node name="simpleobstacle storage" type="Node" parent="."]
+
+[node name="SimpleObstacle" parent="simpleobstacle storage" instance=ExtResource("1_k515x")]
+position = Vector2(358, 73)
+
+[node name="SimpleObstacle2" parent="simpleobstacle storage" instance=ExtResource("1_k515x")]
+position = Vector2(416, 524)
+
+[node name="SimpleObstacle3" parent="simpleobstacle storage" instance=ExtResource("1_k515x")]
+position = Vector2(557, 203)
+
+[node name="SimpleObstacle4" parent="simpleobstacle storage" instance=ExtResource("1_k515x")]
+position = Vector2(749, -20)

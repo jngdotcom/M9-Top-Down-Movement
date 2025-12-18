@@ -1,7 +1,8 @@
 RayCast2D
+Node2D
+Node
 CollisionShape2D
 Area2D
-Node
 Button
 VBoxContainer
 CenterContainer
@@ -11,5 +12,3 @@ ColorRect
 Control
 CanvasLayer
 CountDown
-GPUParticles2D
-Sprite2D
